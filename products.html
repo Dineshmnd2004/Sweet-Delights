@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Delights - Products</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-size: 20px;
+            color: #161414;
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background-color: #853e62c7;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 20px;
+            padding: 40px 20px;
+            background-color: lavenderblush;
+            justify-items: center;
+        }
+
+        .product-card {
+            width: 300px;
+            border-radius: 30px;
+            text-align: center;
+            overflow: hidden;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fce4ec;
+            padding: 20px;
+            transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+        }
+
+       
+        .product-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+        }
+
+        .product-card img {
+            width: 100%;
+            height: 180px;
+            object-fit: cover;
+            border-radius: 15px;
+        }
+
+        .product-card h3 {
+            margin: 15px 0;
+            font-size: 20px;
+            color: #333;
+        }
+
+        .product-card .price {
+            font-size: 18px;
+            color: #ff6699;
+            margin: 10px 0;
+        }
+
+        .product-card .btn {
+            background-color: #ff6699;
+            color: white;
+            padding: 10px 15px;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 20px;
+            cursor: pointer;
+            display: inline-block;
+            margin-top: 10px;
+            transition: background-color 0.3s ease-in-out, transform 0.2s;
+        }
+
+        
+        .product-card .btn:hover {
+            background-color: #e94f34;
+            transform: scale(1.1);
+        }
+
+        .back-btn {
+            background-color: #ff6699;
+            color: black;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            font-size: 18px;
+            cursor: pointer;
+            margin: 20px;
+            text-decoration: none;
+            display: inline-block;
+            text-align: center;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .back-btn:hover {
+            background-color: lavender;
+        }
+
+        .btn {
+    border: none; 
+    outline: none;
+    box-shadow: none;
+}
+
+.sort-container {
+    display: flex;
+    justify-content: flex-start;
+    padding: 20px;
+    margin-left: 0; 
+    flex-grow: 1;
+    
+}
+
+#sort-options {
+    font-size: 18px;
+    padding: 10px;
+    border: 2px solid #aa6b8ea8;
+    border-radius: 10px;
+    cursor: pointer;
+    outline: none;
+    background-color: pink;
+    color: #333;
+    font-weight: bold;
+}
+
+.products-page {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; 
+}
+
+
+
+        .main-heading {
+            text-align: center;
+            font-size: 45px;
+            font-weight: bold;
+            color: black;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+
+.header-container {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 10px 20px; 
+}
+
+
+.cart-container {
+    display: inline-block;
+    padding: 10px;
+    background-color: pink;
+    border-radius: 8px;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.cart-container:hover {
+    background-color: lavender;
+    transform: scale(1.1);
+    
+}
+
+.cart-icon {
+    font-size: 24px;
+    color: white;
+}
+.cart-container a {
+    text-decoration: none; 
+    color: inherit; 
+}
+
+.cart-container a:hover {
+    text-decoration: none; 
+}
+
+
+
+    </style>
+</head>
+<body>
+
+    <h1 class="main-heading">Our Delicious Sweets</h1>
+   
+    <div class="header-container">
+        <div class="sort-container">
+            <select id="sort-options" onchange="sortProducts()">
+                <option value="low-to-high">Price: Low to High</option>
+                <option value="high-to-low">Price: High to Low</option>
+            </select>
+        </div>
+        <div class="cart-container">
+            <a href="cart.html"><svg class="w-[34px] h-[34px] text-gray-800 dark:text-white" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" viewBox="0 0 24 24">
+                <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 4h1.5L9 16m0 0h8m-8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm8 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm-8.5-3h9.25L19 7H7.312"/>
+              </svg>
+              <a href="cart.html"><span id="cart-counter">0</span></a>
+            </a>
+        </div>
+    </div>
+    
+        
+    <section class="products">
+        <div class="product-card">
+            <img src="dfc.jpg" alt="Dry Fruit Sweets">
+            <h3>Combo of Dry Fruit Sweets</h3>
+            <div class="price">₹450</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="dc.jpg" alt="Milk Sweets">
+            <h3>Combo of Milk Sweets</h3>
+            <div class="price">₹320</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="all.jpeg" alt="All in 1 Sweets">
+            <h3>Combo of All in 1 Sweets</h3>
+            <div class="price">₹500</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="Barfi.jpg" alt="Kaju Katli">
+            <h3>Kaju Katli</h3>
+            <div class="price">₹15</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="bl.jpg" alt="Besan Laddu">
+            <h3>Besan Laddu</h3>
+            <div class="price">₹7</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="sp.jpg" alt="Soan Papdi">
+            <h3>Soan Papdi</h3>
+            <div class="price">₹5</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="gj.jpg" alt="Gulab Jamun">
+            <h3>Gulab Jamun</h3>
+            <div class="price">₹8</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="j.jpg" alt="Jilebi">
+            <h3>Jilebi</h3>
+            <div class="price">₹10</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="k.jpg" alt="Kalakand">
+            <h3>Kalakand</h3>
+            <div class="price">₹25</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="mp.jpeg" alt="Mysore Pak">
+            <h3>Mysore Pak</h3>
+            <div class="price">₹6</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+            
+        </div>
+
+        <div class="product-card">
+            <img src="ml.jpeg" alt="Motichoor Laddu">
+            <h3>Motichoor Laddu</h3>
+            <div class="price">₹8</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+
+        <div class="product-card">
+            <img src="Shrikhand.jpg" alt="Shrikhand">
+            <h3>Shrikhand</h3>
+            <div class="price">₹20</div>
+            <button class="add-to-cart btn">Add to Cart</button>
+
+        </div>
+    </section>
+        
+    <a href="home.html" class="back-btn">⬅ Go Back</a>
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            let cart = JSON.parse(localStorage.getItem("cart")) || [];
+            updateCartCounter();
+    
+            function addToCart(event) {
+                const productCard = event.target.closest(".product-card");
+                const name = productCard.querySelector("h3").textContent;
+                const price = parseFloat(productCard.querySelector(".price").textContent.replace("₹", ""));
+                const image = productCard.querySelector("img").src;
+    
+                const existingProduct = cart.find(item => item.name === name);
+                if (existingProduct) {
+                    existingProduct.quantity += 1;
+                } else {
+                    cart.push({ name, price, image, quantity: 1 });
+                }
+    
+                localStorage.setItem("cart", JSON.stringify(cart));
+                updateCartCounter();
+                alert(`✅ ${name} added to cart!`);
+            }
+    
+            function updateCartCounter() {
+                let cartCounter = document.getElementById("cart-counter");
+                let totalItems = cart.reduce((sum, item) => sum + item.quantity, 0);
+                cartCounter.textContent = totalItems;
+            }
+    
+            function sortProducts() {
+                let products = [...document.querySelectorAll(".product-card")];
+                let container = document.querySelector(".products");
+                let sortValue = document.getElementById("sort-options").value;
+    
+                products.sort((a, b) => {
+                    let priceA = parseFloat(a.querySelector(".price").textContent.replace("₹", ""));
+                    let priceB = parseFloat(b.querySelector(".price").textContent.replace("₹", ""));
+                    return sortValue === "low-to-high" ? priceA - priceB : priceB - priceA;
+                });
+    
+                products.forEach(product => container.appendChild(product));
+            }
+    
+            document.querySelectorAll(".add-to-cart").forEach(button => {
+                button.addEventListener("click", addToCart);
+            });
+    
+            window.sortProducts = sortProducts;
+        });
+    </script>
+    
+
+</script>
+</body>
+</html> 

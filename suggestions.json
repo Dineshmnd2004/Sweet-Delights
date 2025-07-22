@@ -1,0 +1,128 @@
+[
+    {
+        "antecedents": "Barfi",
+        "consequents": "Jilebi",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 1.0
+    },
+    {
+        "antecedents": "Jilebi",
+        "consequents": "Barfi",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 1.0
+    },
+    {
+        "antecedents": "Kaju Katli",
+        "consequents": "Barfi",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Barfi",
+        "consequents": "Kaju Katli",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Rasgulla",
+        "consequents": "Barfi",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 1.0
+    },
+    {
+        "antecedents": "Barfi",
+        "consequents": "Rasgulla",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 1.0
+    },
+    {
+        "antecedents": "Kaju Katli",
+        "consequents": "Jilebi",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Jilebi",
+        "consequents": "Kaju Katli",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Ladoo",
+        "consequents": "Jilebi",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Jilebi",
+        "consequents": "Ladoo",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Kaju Katli",
+        "consequents": "Ladoo",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.5625
+    },
+    {
+        "antecedents": "Ladoo",
+        "consequents": "Kaju Katli",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.5625
+    },
+    {
+        "antecedents": "Rasgulla",
+        "consequents": "Kaju Katli",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Kaju Katli",
+        "consequents": "Rasgulla",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Mysore Pak",
+        "consequents": "Ladoo",
+        "support": 0.1111111111111111,
+        "confidence": 1.0,
+        "lift": 2.25
+    },
+    {
+        "antecedents": "Ladoo",
+        "consequents": "Mysore Pak",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 2.25
+    },
+    {
+        "antecedents": "Rasgulla",
+        "consequents": "Ladoo",
+        "support": 0.1111111111111111,
+        "confidence": 0.3333333333333333,
+        "lift": 0.75
+    },
+    {
+        "antecedents": "Ladoo",
+        "consequents": "Rasgulla",
+        "support": 0.1111111111111111,
+        "confidence": 0.25,
+        "lift": 0.75
+    }
+]

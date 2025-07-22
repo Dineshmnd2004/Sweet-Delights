@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us - Sweet Delights</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            background-color: #853e62c7; 
+        }
+
+        .contact-container {
+            max-width: 700px;
+            margin: 50px auto;
+            padding: 20px;
+            text-align: center;
+            background: lavender;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .contact-container h1 {
+            font-size: 36px;
+            color: orangered;
+            margin-bottom: 10px;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+            color: #333;
+            margin-bottom: 20px;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .contact-form button {
+            background-color: #e94f34;
+            color: white;
+            padding: 10px;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .contact-form button:hover {
+            background-color: #c0392b;
+        }
+
+        .contact-details {
+            margin-top: 30px;
+            padding-top: 20px;
+            border-top: 2px solid #e94f34;
+        }
+
+        .contact-details p {
+            font-size: 18px;
+            color: #333;
+            margin: 10px 0;
+        }
+
+        .contact-details a {
+            color: #e94f34;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .contact-details a:hover {
+            text-decoration: underline;
+        }
+
+        .back-btn {
+            background-color: #e94f34;
+            color: white;
+            padding: 10px 20px;
+            text-decoration: none;
+            border-radius: 5px;
+            display: inline-block;
+            margin-top: 20px;
+        }
+
+        .back-btn:hover {
+            background-color: #c0392b;
+        }
+
+        .success-message {
+            color: green;
+            font-size: 18px;
+            margin-top: 15px;
+            display: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="contact-container">
+        <h1>Contact Us</h1>
+        <p>Have questions or special requests? Feel free to reach out to us!</p>
+
+        <form class="contact-form" id="contactForm">
+            <input type="text" id="name" placeholder="Your Name" required>
+            <input type="email" id="email" placeholder="Your Email" required>
+            <input type="tel" id="phone" placeholder="Your Phone Number">
+            <textarea id="message" rows="5" placeholder="Your Message" required></textarea>
+            <button type="submit">Send Message</button>
+        </form>
+
+        <p class="success-message" id="successMessage">✅ Thank you! Your message has been sent.</p>
+
+        <div class="contact-details">
+            <p><strong>Email:</strong> <a href="mailto:support@sweetdelights.com">support@sweetdelights.com</a></p>
+            <p><strong>Phone:</strong> <a href="tel:+919390140191">+91 9390140191</a></p>
+            <p><strong>Location:</strong> Sweet Delights, Kanakapura, 562112. </p>
+        </div>
+
+        <a href="home.html" class="back-btn">⬅ Back</a>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const form = document.getElementById("contactForm");
+            const successMessage = document.getElementById("successMessage");
+
+            form.addEventListener("submit", function (event) {
+                event.preventDefault();
+
+                const name = document.getElementById("name").value.trim();
+                const email = document.getElementById("email").value.trim();
+                const message = document.getElementById("message").value.trim();
+
+                if (name === "" || email === "" || message === "") {
+                    alert("⚠ Please fill in all required fields.");
+                    return;
+                }
+
+                successMessage.style.display = "block";
+
+                form.reset();
+
+                setTimeout(() => {
+                    successMessage.style.display = "none";
+                }, 3000);
+            });
+        });
+    </script>
+
+</body>
+</html>
